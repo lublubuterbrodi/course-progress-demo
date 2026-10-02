@@ -1,75 +1,51 @@
-# React + TypeScript + Vite
+# Course Progress Tracker — Live Demo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains the **frontend demo version** of my Course Progress Tracker project.
 
-Currently, two official plugins are available:
+It was created specifically for the live deployment and uses mock data with `localStorage`, allowing the application to be explored without running a backend or database.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Full-Stack Version
 
-## React Compiler
+The complete version of the project includes:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- TypeScript
+- Node.js
+- Express
+- PostgreSQL
+- Prisma ORM
+- Docker
+- Docker Compose
 
-## Expanding the ESLint configuration
+The full-stack application, backend API, database setup, and Docker configuration are available here:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+**Full Project:**  
+https://github.com/lublubuterbrodi/course-progress-tracker
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Live Demo
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+**Live Application:**  
+PASTE_YOUR_VERCEL_LINK_HERE
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Demo Features
 
-```
+- Create, edit, and delete courses
+- Add and delete lessons
+- Mark lessons as completed or incomplete
+- Automatic course progress calculation
+- Data persistence using browser `localStorage`
+- Responsive interface
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Tech Stack
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- React 19
+- TypeScript
+- Vite
+- Tailwind CSS 4
+- Lucide React
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## About This Repository
 
-```
+This repository is intended only as a standalone frontend demo.
+
+The production-style full-stack implementation uses an Express REST API, Prisma ORM, and PostgreSQL. The full project can be run locally using Docker Compose.
